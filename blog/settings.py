@@ -8,7 +8,7 @@ SECRET_KEY = 'hsszb(k&tg$v6-8*@!f$7zc%j&*gy3a-1d2bh5!0ul)a$y-rx!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['146.190.208.249']
 
 # Application definition
 
