@@ -3,5 +3,5 @@ from django.urls import path, include
 from stock import views
 
 urlpatterns = [
-    path('all_stock/', views.stock),
+    path('', views.stock),
 ]
