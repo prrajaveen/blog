@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <div class="alert alert-danger mt-3" role="alert">
+                <h3>All Stocks</h3>
+            </div>
+        </div>
+        <div class="col-12">
+            <table id="myTable" class="display">
+                <thead>
+                <tr>
+                    <th>SYMBOL</th>
+                    <th>COMPANY NAME</th>
+                    <th>MARKET CAP</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for stock in stocks %}
+                <tr>
+                    <td>{{stock.symbol}}</td>
+                    <td>{{stock.company_name}}</td>
+                    <td>{{stock.market_cap}}</td>
+                </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+{% endblock content %}
+
+{% block js %}
+<script>
+    let table = new DataTable('#myTable', {
+    responsive: true
+
+});
+</script>
+{% endblock js %}
+
